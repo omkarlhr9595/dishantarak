@@ -3,6 +3,18 @@
     * Copyright 2013-2020 Start Bootstrap
     * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/master/LICENSE)
     */
+   const text = 'Programmer - Web Designer - Sketch Artist'
+let index = 0;
+
+function writeText(){
+    document.getElementById("text").innerText = text.slice(0,index);
+    index++;
+
+    if(index> text.length - 1){
+        index=1;
+    }
+}
+setInterval(writeText,100);
     (function($) {
     "use strict"; // Start of use strict
   
@@ -41,7 +53,7 @@
       offset: 80
     });
   
-    // Collapse Navbar
+    // Collapse Navbar  
     var navbarCollapse = function() {
       if ($("#mainNav").offset().top > 100) {
         $("#mainNav").addClass("navbar-shrink");
@@ -67,3 +79,4 @@
   
   })(jQuery); // End of use strict
   
+
